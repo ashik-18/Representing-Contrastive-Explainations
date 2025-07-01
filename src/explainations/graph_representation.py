@@ -9,7 +9,7 @@ def install_requirements():
     subprocess.run(["python3", "-m", "venv", "venv"], check=True)
     activate_script = "./venv/bin/activate"
     subprocess.run(["source", activate_script], shell=True, executable="/bin/bash")
-    subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+    subprocess.run(["pip", "install", "-r", "../../requirements.txt"], check=True)
 
 def parse_mapping(line):
     d = {}
