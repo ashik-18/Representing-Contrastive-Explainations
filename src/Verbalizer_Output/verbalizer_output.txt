@@ -1,0 +1,59 @@
+**Block 1**  
+The fact F2F12 qualifies because it is married to F2M11, who is both a Parent and a Son. The foil F1M1 needs to be married to someone who is a Parent and a Son, but it is married to F1F2, who is a Father instead. The difference is that F2M11 is a Son, while F1F2 is a Father. There are no conflicts.  
+
+**Block 2**  
+The fact F3M47 qualifies as a Child and Male with a parent F3M45, who is a Son. The foil F10M184 needs a parent who is a Son, but its parent F10M182 is not. The difference is that F3M45 is a Son, while F10M182 is not. There are no conflicts.  
+
+**Block 3**  
+The fact F5F65 qualifies as a Grandparent with a child F5M66, who has a parent F5F65. The foil F7F111 needs to have a child with a parent who is a Grandparent, but F7M112 does not meet this. The difference is that F5F65 is a Grandmother. There are no conflicts.  
+
+**Block 4**  
+The fact F10M187 qualifies as a Person with a daughter F10F192. The foil F9M157 needs to have a daughter, but F9F140 is not a Daughter. The difference is that F10F192 is a Daughter, and F10M187 has a child F10F192. There are no conflicts.  
+
+**Block 5**  
+The fact F1F7 qualifies as a Granddaughter and Sister married to F1M8. The foil F2F30 is a Granddaughter married to F2M31 but is not a Sister. The difference is that F1F7 is a Sister. There are no conflicts.  
+
+**Block 6**  
+The fact F9M146 qualifies as married to F9F145, who has a parent F9M144, a Father. The foil F7M112 is married to F7F108, who has a parent F7M110, but the conditions differ. The difference is that F9F145 has a parent F9M144, and F9M146 is married to F9F145. There are no conflicts.  
+
+**Block 7**  
+The fact F9M162 qualifies as having a parent F9F141, who has a sibling F9M157 with a parent F9M139, a Father. The foil F3F42 has a parent F3M44, but the conditions differ. The difference is that F9M162 has a parent F9F141. There are no conflicts.  
+
+**Block 8**  
+The fact F2M29 qualifies as having a daughter F2F30, who has a parent F2F28, a Daughter. The foil F6M73 has a child F6M71, but F6F74 is not a Daughter. The difference is that F2M29 has a child F2F30, F2F28 is a Daughter, and F2F30 has a parent F2F28. There are no conflicts.  
+
+**Block 9**  
+The fact F6F101 qualifies as married to F6M100, who has a parent F6M92. The foil F10F195 is married to F10M196, who does not have a parent F10M197. The difference is that F6M100 has a parent F6M92. There are no conflicts.  
+
+**Block 10**  
+The fact F6M92 qualifies as a Father, Grandfather, Parent, and Son. The foil F6F84 does not meet these conditions. The difference is that F6M92 is a Son, Grandfather, and Father. There are no conflicts.  
+
+**Block 11**  
+The fact F7F119 qualifies as a Female with a sibling F7F121. The foil F9F164 has a sibling F9M166, who is a Granddaughter. The difference is that F7F121 is not a Granddaughter. There are no conflicts.  
+
+**Block 12**  
+The fact F2M13 qualifies as a Brother and Grandson. The foil F9F143 does not meet these conditions. The difference is that F2M13 is a Brother and Grandson. There are no conflicts.  
+
+**Block 13**  
+The fact F6M73 qualifies as a Male married to F6F74, a Female. The foil F6F94 is not a Male and is married to itself. The difference is that F6M73 is married to F6F74 and is a Father. There are no conflicts.  
+
+**Block 14**  
+The fact F9F143 qualifies as married to F9M144, who has a child F9F148, a Sister. The foil F2F17 is married to F2F12, who has a child F2F15, but the conditions differ. The difference is that F9F143 is married to F9M144. There are no conflicts.  
+
+**Block 15**  
+The fact F2M20 qualifies as married to F2F19, a Mother with a sibling F2M11. The foil F9M139 does not meet these conditions. The difference is that F2M20 is married to F2F19, who has a sibling F2M11 and is a Mother. There are no conflicts.  
+
+**Block 16**  
+The fact F9M166 qualifies as a Person with a sibling F9F164, who has a parent F9M162, a Grandson. The foil F8F135 has a sibling F8M138, but the conditions differ. The difference is that F9M166 has a sibling F9F164. There are no conflicts.  
+
+**Block 17**  
+The fact F3F46 qualifies as having a child F3M47, whose parent F3F46 is married to F3M45. The foil F7F118 has a parent F7M115 married to F7F116, but the conditions differ. The difference is that F3F46 has a child F3M47. There are no conflicts.  
+
+**Block 18**  
+The fact F2M11 qualifies as a Brother with a sibling F2F26, a Daughter. The foil F7M112 does not meet these conditions. The difference is that F2M11 is a Brother, F2F26 is a Daughter, and F2M11 has a sibling F2F26. There are no conflicts.  
+
+**Block 19**  
+The fact F6F97 qualifies as having a parent F6M95, a Father with a child F6F96, a Daughter. The foil F6F70 has a parent F6M92, but F6F94 is not a Daughter. The difference is that F6F97 has a parent F6M95. There are no conflicts.  
+
+**Block 20**  
+The fact F6M75 qualifies as having a parent F6M73, a Son. The foil F7M123 has a parent F7F121, who is not a Son. The difference is that F6M73 is a Son. There are no conflicts.
