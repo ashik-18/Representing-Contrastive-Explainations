@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ReCon Reasoner</title>
+        <script>
+            function toggleKeyField(){
+                const openaiRadio = document.getElementById('explainer_openai');
+                const keyDiv = document.getElementById('openai_key_div');
+                keyDiv.style.display = openaiRadio.checked ? 'block' : 'none';
+            }
+        </script>
+    </head>
+
+    <body onload="toggleKeyField()">
+        <h1>Contrastive Explanations Reasoner</h1>
+        <form method="post" enctype="multipart/form-data">
+            <label for="reasoner">Reasoner:</label>
+            <select name="reasoner" id="reasoner">
+                <option value="ELK">ELK</option>
+                <option value="hermit">Hermit</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="owlfile">Upload your owl file:</label>
+            <input type="file" name="owlfile" id="owlfile" accept=".owl" required>
+            <br>
+            <br>
+
+            <label>Enter the fact: </label>
+            <input type="text" name="fact" id="fact">
+            <label>Enter the foil: </label>
+            <input type="text" name="foil" id="foi">
+
+            <br>
+            <br>
+
+            <label>Explainer:</label>
+
+            <input type="radio" name="explainer" id="explainer_openai" value="openai" onclick="toggleKeyField()" checked> 
+            <label for="explainer_openai">OpenAI</label>
+            <input type="radio" name="explainer" id="explainer_llama" value="llama" onclick="toggleKeyField()">
+            <label for="explainer_llama">Llama</label>
+
+            <br>
+            <br>
+
+            <div id="openai_key_div">
+                <label for="openai_key">Enter your OpenAI API Key:</label>
+                <input type="text" name="openai_key" id="openai_key" placeholder="sk-...." required>
+                <p><em>Note: The model used will be o3. Your key will not be stored.</em></p>
+            </div>
+
+            <button type="submit" name="action" value="generate">Generate Explanation</button>
+            <button type="submit" name="action" value="visualize">Visualize</button>
+
+        </form>
+
+    </body>
+</html>
