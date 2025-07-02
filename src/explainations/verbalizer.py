@@ -1,7 +1,10 @@
 import os
 import re
 import argparse
+import sys
 from huggingface_hub import InferenceClient
+from graph_representation import install_requirements
+
 
 def extract_all_fact_foil_blocks(file_path):
     """
@@ -146,7 +149,7 @@ def extract_all_fact_foil_blocks(file_path):
     return blocks
 
 
-def generate_natural_language_explanations(log_file, output_file):
+def generate_natural_language_explanations(log_file, output_file = "../output/verbalizer/verbalizer_output.txt"):
     blocks = extract_all_fact_foil_blocks(log_file)
 
     prompt = (
@@ -191,10 +194,22 @@ def generate_natural_language_explanations(log_file, output_file):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("input_file")
-    parser.add_argument("output_file")
-    args = parser.parse_args()
-    log_path = f"{args.input_file}"
-    txt_path = f"{args.output_file}.txt"
-    generate_natural_language_explanations(log_path, txt_path)
+    install_requirements()
+
+    parser = argparse.ArgumentParser("Natural Language Representation of Fact vs Foil")
+    parser.add_argument(
+        "--input-file",
+        type=str,
+        # Change this to your input file path when running without cmd line
+        default="../logs/family-ontology.owl.log",
+        help="Path to the input file containing the mappings and axioms."
+        # todo need to make this required = true before pushing
+    )
+    try:
+        args = parser.parse_args()
+        log_path = f"{args.input_file}"
+    except Exception as e:
+        print(f"Error parsing arguments: {e}")
+        sys.exit(1)
+
+    generate_natural_language_explanations(log_path)
