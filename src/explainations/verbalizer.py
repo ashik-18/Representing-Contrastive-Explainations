@@ -149,7 +149,7 @@ def extract_all_fact_foil_blocks(file_path):
     return blocks
 
 
-def generate_natural_language_explanations(log_file, output_file = "../output/verbalizer/verbalizer_output.txt"):
+def generate_natural_language_explanations(log_file, api_key, output_file = "../output/verbalizer/verbalizer_output.txt"):
     blocks = extract_all_fact_foil_blocks(log_file)
 
     prompt = (
@@ -179,7 +179,7 @@ def generate_natural_language_explanations(log_file, output_file = "../output/ve
 
     client = InferenceClient(
         provider="together",
-        api_key=os.environ.get("HF_TOKEN3"),
+        api_key=api_key,
     )
     response = client.chat.completions.create(
         model="deepseek-ai/DeepSeek-V3",
@@ -205,11 +205,17 @@ if __name__ == "__main__":
         help="Path to the input file containing the mappings and axioms."
         # todo need to make this required = true before pushing
     )
+    parser.add_argument(
+        "--api-key",
+        type=str,
+        help="LLM model api key."
+    )
     try:
         args = parser.parse_args()
         log_path = f"{args.input_file}"
+        api_key = f"{args.api_key}"
     except Exception as e:
         print(f"Error parsing arguments: {e}")
         sys.exit(1)
 
-    generate_natural_language_explanations(log_path)
+    generate_natural_language_explanations(log_path, api_key)
