@@ -21,7 +21,7 @@ def run_script():
     action = request.form.get('action')
 
     owl_file = request.files['owl_file']
-    # query_file = request.form['query_input_text']
+    # query_file = request.files['query_file']
 
     filename = secure_filename(owl_file.filename)
     filepath = os.path.join(UPLOAD_FOLDER, filename)
