@@ -175,8 +175,6 @@ def generate_natural_language_explanations(log_file, api_key, output_file = "../
         prompt += f"Different: {blk['difference_axioms']}\n"
         prompt += f"Conflicts: {blk['conflicts']}\n"
 
-    # print(prompt)
-
     client = InferenceClient(
         provider="together",
         api_key=api_key,
@@ -208,7 +206,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--api-key",
         type=str,
-        help="LLM model api key."
+        help="LLM model api key.",
+        default = "key",
+        #todo store default key here
     )
     try:
         args = parser.parse_args()

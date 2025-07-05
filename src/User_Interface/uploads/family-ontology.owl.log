@@ -1,0 +1,497 @@
+Program started.
+Arguments: [/Users/ashikmr/Desktop/pool_sample/files/family-ontology.owl, 4, 20]
+Reasoner choice: ELK
+13:29:37,023 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version ?
+13:29:37,024 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - No custom configurators were discovered as a service.
+13:29:37,024 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+13:29:37,025 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+13:29:37,026 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+13:29:37,026 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+13:29:37,030 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+13:29:37,030 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+13:29:37,031 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+13:29:37,032 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/ashikmr/Desktop/contrastive_explanations/experiments/contrastive-explanations-0.3-SNAPSHOT-jar-with-dependencies.jar!/logback.xml]
+13:29:37,036 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@10d59286 - URL [jar:file:/Users/ashikmr/Desktop/contrastive_explanations/experiments/contrastive-explanations-0.3-SNAPSHOT-jar-with-dependencies.jar!/logback.xml] is not of type file
+13:29:37,131 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+13:29:37,131 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+13:29:37,136 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+13:29:37,158 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [FILE] not referenced. Skipping further processing.
+13:29:37,158 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to OFF
+13:29:37,158 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+13:29:37,159 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@fe18270 - End of configuration.
+13:29:37,159 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@6fb0d3ed - Registering current configuration as safe fallback point
+13:29:37,159 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fdba6f9 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 128 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+Class expression size: 4
+Iterations: 20
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/Users/ashikmr/Desktop/contrastive_explanations/experiments/contrastive-explanations-0.3-SNAPSHOT-jar-with-dependencies.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Parsing ontology...
+Removed 0 unsupported axioms
+Computing Instantiation...
+Finding contrastive explanation problems...
+Done finding contrastive explanation concepts
+CEP: ClassExpression: married some 
+    (Parent
+     and Person
+     and Son),   Fact: F2F12,   Foil: F1M1
+Selected 7 relevant axioms.
+Selected 3 relevant individuals.
+Chose module of size 1273.
+Size ABox2: 27
+Size ABox3: 7
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 54
+Flexible: 20
+Computed first justification
+OverApproximated ontology size: 36
+Flexible: 7
+Computed second justification
+CE: Common: _X3 married _X2
+Different: _X2 Type Son, _X2 Type Father
+Fact mapping: _X3->F2F12, _X2->F2M11
+Foil mapping: _X3->F1M1, _X2->F1F2
+Conflicts: 
+
+STATS: 1 2 0 0 426
+CEP: ClassExpression: Child
+ and Male
+ and (hasParent some Son),   Fact: F3M47,   Foil: F10M184
+Selected 7 relevant axioms.
+Selected 3 relevant individuals.
+Chose module of size 832.
+Size ABox2: 27
+Size ABox3: 8
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 37
+Flexible: 19
+Computed first justification
+OverApproximated ontology size: 19
+Flexible: 8
+Computed second justification
+CE: Common: _X1 Type Grandson, _X1 hasParent _X3
+Different: _X3 Type Son
+Fact mapping: _X1->F3M47, _X3->F3M45
+Foil mapping: _X1->F10M184, _X3->F10M182
+Conflicts: 
+
+STATS: 2 1 0 0 184
+CEP: ClassExpression: Grandparent
+ and (hasChild some (hasParent some Grandparent)),   Fact: F5F65,   Foil: F7F111
+Selected 5 relevant axioms.
+Selected 4 relevant individuals.
+Chose module of size 667.
+Size ABox2: 56
+Size ABox3: 6
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 58
+Flexible: 50
+Computed first justification
+OverApproximated ontology size: 9
+Flexible: 6
+Computed second justification
+CE: Common: _X9 hasParent _X2, _X2 hasChild _X9
+Different: _X2 Type Grandmother
+Fact mapping: _X9->F5M66, _X2->F5F65
+Foil mapping: _X9->F7M112, _X2->F7F111
+Conflicts: 
+
+STATS: 2 1 0 0 269
+CEP: ClassExpression: Person
+ and (hasChild some 
+    (Daughter
+     and Female)),   Fact: F10M187,   Foil: F9M157
+Selected 14 relevant axioms.
+Selected 5 relevant individuals.
+Chose module of size 1305.
+Size ABox2: 110
+Size ABox3: 25
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 137
+Flexible: 85
+Computed first justification
+OverApproximated ontology size: 54
+Flexible: 25
+Computed second justification
+CE: Common: _X5 Type Male
+Different: _X2 Type Daughter, _X5 hasChild _X2
+Fact mapping: _X2->F10F192, _X5->F10M187
+Foil mapping: _X2->F9F140, _X5->F9M157
+Conflicts: 
+
+STATS: 1 2 0 0 296
+CEP: ClassExpression: Grandchild
+ and Sister
+ and (married some Person),   Fact: F1F7,   Foil: F2F30
+Selected 5 relevant axioms.
+Selected 3 relevant individuals.
+Chose module of size 1273.
+Size ABox2: 21
+Size ABox3: 6
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 48
+Flexible: 15
+Computed first justification
+OverApproximated ontology size: 34
+Flexible: 6
+Computed second justification
+CE: Common: _X1 Type Granddaughter, _X3 Type Male, _X1 married _X3
+Different: _X1 Type Sister
+Fact mapping: _X1->F1F7, _X3->F1M8
+Foil mapping: _X1->F2F30, _X3->F2M31
+Conflicts: 
+
+STATS: 3 1 0 0 180
+CEP: ClassExpression: married some (hasParent some 
+    (Male
+     and Parent)),   Fact: F9M146,   Foil: F7M112
+Selected 5 relevant axioms.
+Selected 5 relevant individuals.
+Chose module of size 1026.
+Size ABox2: 65
+Size ABox3: 14
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 75
+Flexible: 51
+Computed first justification
+OverApproximated ontology size: 26
+Flexible: 14
+Computed second justification
+CE: Common: _X2 Type Father
+Different: _X6 hasParent _X2, _X13 married _X6
+Fact mapping: _X6->F9F145, _X13->F9M146, _X2->F9M144
+Foil mapping: _X6->F7F108, _X13->F7M112, _X2->F7M110
+Conflicts: 
+
+STATS: 1 2 0 0 284
+CEP: ClassExpression: hasParent some (hasSibling some (hasParent some Father)),   Fact: F9M162,   Foil: F3F42
+Selected 6 relevant axioms.
+Selected 11 relevant individuals.
+Chose module of size 581.
+Size ABox2: 616
+Size ABox3: 56
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 616
+Flexible: 560
+Computed first justification
+OverApproximated ontology size: 57
+Flexible: 56
+Computed second justification
+CE: Common: _X18 hasParent _X2, _X22 hasSibling _X18, _X2 Type Father
+Different: _X50 hasParent _X22
+Fact mapping: _X22->F9M157, _X50->F9M162, _X2->F9M139, _X18->F9F141
+Foil mapping: _X22->F3M44, _X50->F3F42, _X2->F3M43, _X18->F3F53
+Conflicts: 
+
+STATS: 3 1 0 0 547
+CEP: ClassExpression: hasChild some 
+    (Daughter
+     and (hasParent some Child)),   Fact: F2M29,   Foil: F6M73
+Selected 4 relevant axioms.
+Selected 7 relevant individuals.
+Chose module of size 786.
+Size ABox2: 112
+Size ABox3: 12
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 117
+Flexible: 100
+Computed first justification
+OverApproximated ontology size: 21
+Flexible: 12
+Computed second justification
+CE: Common: 
+Different: _X18 hasChild _X12, _X6 Type Daughter, _X12 Type Daughter, _X12 hasParent _X6
+Fact mapping: _X12->F2F30, _X6->F2F28, _X18->F2M29
+Foil mapping: _X12->F6M71, _X6->F6F74, _X18->F6M73
+Conflicts: 
+
+STATS: 0 4 0 0 319
+CEP: ClassExpression: married some 
+    (Person
+     and (hasParent some Person)),   Fact: F6F101,   Foil: F10F195
+Selected 18 relevant axioms.
+Selected 12 relevant individuals.
+Chose module of size 1482.
+Size ABox2: 612
+Size ABox3: 116
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 639
+Flexible: 496
+Computed first justification
+OverApproximated ontology size: 144
+Flexible: 116
+Computed second justification
+CE: Common: _X42 married _X29, _X12 Type Male, _X29 Type Person
+Different: _X29 hasParent _X12
+Fact mapping: _X12->F6M92, _X42->F6F101, _X29->F6M100
+Foil mapping: _X12->F10M197, _X42->F10F195, _X29->F10M196
+Conflicts: 
+
+STATS: 3 1 0 0 1240
+CEP: ClassExpression: Father
+ and Grandfather
+ and Parent
+ and Son,   Fact: F6M92,   Foil: F6F84
+Selected 3 relevant axioms.
+Selected 2 relevant individuals.
+Chose module of size 401.
+Size ABox2: 6
+Size ABox3: 0
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 11
+Flexible: 6
+Computed first justification
+OverApproximated ontology size: 8
+Flexible: 0
+Computed second justification
+CE: Common: 
+Different: _X0 Type Son, _X0 Type Grandfather, _X0 Type Father
+Fact mapping: _X0->F6M92
+Foil mapping: _X0->F6F84
+Conflicts: 
+
+STATS: 0 3 0 0 232
+CEP: ClassExpression: Person
+ and (hasSibling some 
+    (Female
+     and Person)),   Fact: F7F119,   Foil: F9F164
+Selected 21 relevant axioms.
+Selected 4 relevant individuals.
+Chose module of size 1233.
+Size ABox2: 108
+Size ABox3: 22
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 135
+Flexible: 86
+Computed first justification
+OverApproximated ontology size: 50
+Flexible: 22
+Computed second justification
+CE: Common: _X9 Type Female, _X9 hasSibling _X4
+Different: _X4 Type Granddaughter
+Fact mapping: _X9->F7F119, _X4->F7F121
+Foil mapping: _X9->F9F164, _X4->F9M166
+Conflicts: 
+
+STATS: 2 1 0 0 355
+CEP: ClassExpression: Brother
+ and Grandson
+ and Male
+ and Thing,   Fact: F2M13,   Foil: F9F143
+Selected 5 relevant axioms.
+Selected 2 relevant individuals.
+Chose module of size 439.
+Size ABox2: 10
+Size ABox3: 0
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 15
+Flexible: 10
+Computed first justification
+OverApproximated ontology size: 7
+Flexible: 0
+Computed second justification
+CE: Common: 
+Different: _X0 Type Brother, _X0 Type Grandson
+Fact mapping: _X0->F2M13
+Foil mapping: _X0->F9F143
+Conflicts: 
+
+STATS: 0 2 0 0 265
+CEP: ClassExpression: Male
+ and (married some 
+    (Female
+     and Thing)),   Fact: F6M73,   Foil: F6F94
+Selected 8 relevant axioms.
+Selected 3 relevant individuals.
+Chose module of size 1048.
+Size ABox2: 30
+Size ABox3: 6
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 40
+Flexible: 24
+Computed first justification
+OverApproximated ontology size: 18
+Flexible: 6
+Computed second justification
+CE: Common: _X3 Type Female
+Different: _X0 married _X3, _X0 Type Father
+Fact mapping: _X0->F6M73, _X3->F6F74
+Foil mapping: _X0->F6F94, _X3->F6F94
+Conflicts: 
+
+STATS: 1 2 0 0 362
+CEP: ClassExpression: married some (hasChild some 
+    (Female
+     and Thing)),   Fact: F9F143,   Foil: F2F17
+Selected 20 relevant axioms.
+Selected 6 relevant individuals.
+Chose module of size 923.
+Size ABox2: 240
+Size ABox3: 51
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 245
+Flexible: 189
+Computed first justification
+OverApproximated ontology size: 57
+Flexible: 51
+Computed second justification
+CE: Common: _X15 Type Sister, _X20 hasChild _X15
+Different: _X24 married _X20
+Fact mapping: _X24->F9F143, _X20->F9M144, _X15->F9F148
+Foil mapping: _X24->F2F17, _X20->F2F12, _X15->F2F15
+Conflicts: 
+
+STATS: 2 1 0 0 815
+CEP: ClassExpression: married some 
+    (Mother
+     and (hasSibling some Male)),   Fact: F2M20,   Foil: F9M139
+Selected 8 relevant axioms.
+Selected 4 relevant individuals.
+Chose module of size 909.
+Size ABox2: 56
+Size ABox3: 6
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 61
+Flexible: 50
+Computed first justification
+OverApproximated ontology size: 14
+Flexible: 6
+Computed second justification
+CE: Common: _X3 Type Male
+Different: _X11 married _X7, _X7 hasSibling _X3, _X7 Type Mother
+Fact mapping: _X11->F2M20, _X7->F2F19, _X3->F2M11
+Foil mapping: _X11->F9M139, _X7->F9M139, _X3->F9M139
+Conflicts: 
+
+STATS: 1 3 0 0 365
+CEP: ClassExpression: Person
+ and (hasSibling some (hasParent some Male)),   Fact: F9M166,   Foil: F8F135
+Selected 12 relevant axioms.
+Selected 4 relevant individuals.
+Chose module of size 1442.
+Size ABox2: 72
+Size ABox3: 25
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 99
+Flexible: 47
+Computed first justification
+OverApproximated ontology size: 53
+Flexible: 25
+Computed second justification
+CE: Common: _X6 hasParent _X8, _X3 Type Person, _X8 Type Grandson
+Different: _X3 hasSibling _X6
+Fact mapping: _X6->F9F164, _X8->F9M162, _X3->F9M166
+Foil mapping: _X6->F8M138, _X8->F8M136, _X3->F8F135
+Conflicts: 
+
+STATS: 3 1 0 0 608
+CEP: ClassExpression: hasChild some (hasParent some (married some Thing)),   Fact: F3F46,   Foil: F7F118
+Selected 7 relevant axioms.
+Selected 4 relevant individuals.
+Chose module of size 797.
+Size ABox2: 88
+Size ABox3: 10
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 88
+Flexible: 78
+Computed first justification
+OverApproximated ontology size: 11
+Flexible: 10
+Computed second justification
+CE: Common: _X1 hasParent _X7, _X7 married _X9
+Different: _X0 hasChild _X1
+Fact mapping: _X7->F3F46, _X9->F3M45, _X1->F3M47, _X0->F3F46
+Foil mapping: _X7->F7M115, _X9->F7F116, _X1->F7F118, _X0->F7F118
+Conflicts: 
+
+STATS: 2 1 0 0 593
+CEP: ClassExpression: Brother
+ and (hasSibling some 
+    (Child
+     and Daughter)),   Fact: F2M11,   Foil: F7M112
+Selected 9 relevant axioms.
+Selected 6 relevant individuals.
+Chose module of size 466.
+Size ABox2: 174
+Size ABox3: 0
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 179
+Flexible: 174
+Computed first justification
+OverApproximated ontology size: 8
+Flexible: 0
+Computed second justification
+CE: Common: 
+Different: _X19 Type Brother, _X27 Type Daughter, _X19 hasSibling _X27
+Fact mapping: _X19->F2M11, _X27->F2F26
+Foil mapping: _X19->F7M112, _X27->__C1
+Conflicts: 
+
+STATS: 0 3 0 1 435
+CEP: ClassExpression: hasParent some 
+    (Father
+     and (hasChild some Female)),   Fact: F6F97,   Foil: F6F70
+Selected 13 relevant axioms.
+Selected 14 relevant individuals.
+Chose module of size 999.
+Size ABox2: 728
+Size ABox3: 104
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 733
+Flexible: 624
+Computed first justification
+OverApproximated ontology size: 110
+Flexible: 104
+Computed second justification
+CE: Common: _X34 Type Father, _X34 hasChild _X25, _X25 Type Daughter
+Different: _X13 hasParent _X34
+Fact mapping: _X34->F6M95, _X13->F6F97, _X25->F6F96
+Foil mapping: _X34->F6M92, _X13->F6F70, _X25->F6F94
+Conflicts: 
+
+STATS: 3 1 0 0 2785
+CEP: ClassExpression: hasParent some 
+    (Child
+     and Person
+     and Son),   Fact: F6M75,   Foil: F7M123
+Selected 6 relevant axioms.
+Selected 5 relevant individuals.
+Chose module of size 1305.
+Size ABox2: 50
+Size ABox3: 18
+Generated ABoxes
+Nothing to fix!
+OverApproximated ontology size: 77
+Flexible: 32
+Computed first justification
+OverApproximated ontology size: 46
+Flexible: 18
+Computed second justification
+CE: Common: _X6 hasParent _X4
+Different: _X4 Type Son
+Fact mapping: _X6->F6M75, _X4->F6M73
+Foil mapping: _X6->F7M123, _X4->F7F121
+Conflicts: 
+
+STATS: 1 1 0 0 519
