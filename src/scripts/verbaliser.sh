@@ -1,4 +1,3 @@
 #!/bin/bash
 
-python ../explainations/verbalizer.py --input-file "../logs/family-ontology.owl.log" \
-  --api-key "api key"
+python ../explainations/verbalizer.py --input-file $1 --api-key ${2:+$2}
